@@ -33,22 +33,22 @@ return packer.startup(function(use)
 	use("joshdick/onedark.vim")
 	use("junegunn/vim-easy-align")
 	use("junegunn/rainbow_parentheses.vim")
-
 	use("ap/vim-css-color")
 	use("wakatime/vim-wakatime")
 	use("psliwka/vim-smoothie")
 	use("kdheepak/lazygit.nvim")
 	use("nvim-lua/plenary.nvim")
 	use("szw/vim-maximizer")
+	use("tpope/vim-commentary")
 	use("tpope/vim-surround")
 	use("vim-scripts/ReplaceWithRegister")
 	use("nvim-lualine/lualine.nvim")
 	use({ "nvim-telescope/telescope-fzf-native.nvim", run = "make" })
 	use({ "nvim-telescope/telescope.nvim", branch = "0.1.x" })
-  use {
-    "nvim-telescope/telescope-file-browser.nvim",
-    requires = { "nvim-telescope/telescope.nvim", "nvim-lua/plenary.nvim" }
-  }
+	use({
+		"nvim-telescope/telescope-file-browser.nvim",
+		requires = { "nvim-telescope/telescope.nvim", "nvim-lua/plenary.nvim" },
+	})
 	-- startup page
 	use({
 		"goolord/alpha-nvim",
@@ -94,6 +94,24 @@ return packer.startup(function(use)
 	-- git integration
 	use("lewis6991/gitsigns.nvim") -- show line modifications on left hand side
 
+	-- GitHub Copilot
+
+	use({
+		"zbirenbaum/copilot.lua",
+		cmd = "Copilot",
+		event = "InsertEnter",
+		config = function()
+			require("copilot").setup({})
+		end,
+	})
+
+	use({
+		"zbirenbaum/copilot-cmp",
+		after = { "copilot.lua" },
+		config = function()
+			require("copilot_cmp").setup()
+		end,
+	})
 	if packer_bootstrap then
 		require("packer").sync()
 	end

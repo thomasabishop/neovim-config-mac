@@ -1,5 +1,6 @@
-local opt = vim.opt 
+vim.g.onedark_terminal_italics = 1
 
+local opt = vim.opt
 opt.number = true
 opt.showmatch = true
 opt.ignorecase = true
