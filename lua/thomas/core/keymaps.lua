@@ -25,3 +25,9 @@ keymap.set("n", "<leader>bb", "<cmd>Telescope buffers<cr>")
 keymap.set("n", "<leader>tt", "<cmd>Telescope file_browser hidden=true<cr>")
 keymap.set("n", "<leader>gg", "<cmd>Telescope live_grep<cr>")
 keymap.set("n", "<leader>fh", "<cmd>Telescope help_tags<cr>")
+
+-- Nvim Tree
+keymap.set("n", "<leader>fb", ":NvimTreeToggle<CR>")
+
+-- Lazy Git
+keymap.set("n", "<leader>lg", ":LazyGit<CR>")
