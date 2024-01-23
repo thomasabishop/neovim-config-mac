@@ -43,6 +43,8 @@ return packer.startup(function(use)
 	use("tpope/vim-surround")
 	use("vim-scripts/ReplaceWithRegister")
 	use("nvim-lualine/lualine.nvim")
+	use("nvim-tree/nvim-web-devicons")
+	use("ryanoasis/vim-devicons")
 	use({ "nvim-telescope/telescope-fzf-native.nvim", run = "make" })
 	use({ "nvim-telescope/telescope.nvim", branch = "0.1.x" })
 	use({

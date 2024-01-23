@@ -1,5 +1,3 @@
-vim.g.onedark_terminal_italics = 1
-
 local opt = vim.opt
 opt.number = true
 opt.showmatch = true
@@ -23,3 +21,4 @@ opt.showmode = false
 opt.termguicolors = true
 opt.wrap = false
 opt.backspace = "indent,eol,start"
+vim.g.onedark_terminal_italics = 1
