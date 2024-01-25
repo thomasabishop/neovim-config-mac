@@ -48,7 +48,7 @@ vim.diagnostic.config({
 	virtual_text = false,
 })
 
-vim.keymap.set("n", "lh", function()
+vim.keymap.set("n", "<leader>lh", function()
 	local config = vim.diagnostic.config()
 	vim.diagnostic.config({ virtual_text = not config.virtual_text })
 	print("Toggling LSP diagnostics")
