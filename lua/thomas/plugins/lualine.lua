@@ -3,7 +3,7 @@ if not status then
 	return
 end
 
-local lualine_onedark = require("lualine.themes.onedark")
+-- local lualine_onedark = require("lualine.themes.onedark")
 
 lualine_onedark.normal.c.bg = "#3c3836"
 
