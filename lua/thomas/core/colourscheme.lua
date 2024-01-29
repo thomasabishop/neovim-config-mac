@@ -14,5 +14,5 @@ local function update_hl(group, tbl)
 end
 
 update_hl("Function", { bold = true })
-vim.cmd("highlight Normal guibg='#303030'")
-vim.cmd("highlight Cursorline guibg='#3b3b3b'")
+-- vim.cmd("highlight Normal guibg='#303030'")
+-- vim.cmd("highlight Cursorline guibg='#3b3b3b'")
